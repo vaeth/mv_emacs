@@ -1,9 +1,9 @@
 ;;; verify.el --- Compare current buffer with saved version
 ;;  $Revision: 0.2 $
 
-;; Copyright (C) 1993/2004 by Martin Väth
+;; Copyright (C) 1993/2004 by Martin V\"ath
 
-;; Author:  Martin Väth <martin@mvath.de>
+;; Author:  Martin V\"ath <martin@mvath.de>
 ;; Keywords: compare verify compare-windows
 
 ;;; Commentary:

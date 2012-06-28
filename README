@@ -1,14 +1,14 @@
 
 mv_emacs - Packages for (X)Emacs: block support, macrorecorder, verify changes
 
-(C) Martin Väth <martin@mvath.de>
+(C) Martin VÃ¤th <martin@mvath.de>
 The license of this package is the GNU Public License GPL-2.
 
-The packages should run with all newer versions of Emacs or XEmacs.
+The packages should run with all non-ancient versions of Emacs or XEmacs.
 
 For Gentoo, there is an ebuild in the mv overlay (available by layman).
 
-block.el (revision 1.1):
+block.el (revision 1.4):
 
 The standard Emacs treatment of the region is rather different from that
 of many of the classical text editors. In many other editors a "block"

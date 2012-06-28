@@ -1,9 +1,9 @@
 ;;; kbdmacro.el --- A keyboard macro recorder.
 ;;  $Revision: 0.3 $
 
-;; Copyright (C) 1994/2004 by Martin Väth
+;; Copyright (C) 1994/2004 by Martin V\"ath
 
-;; Author:  Martin Väth <martin@mvath.de>
+;; Author:  Martin V\"ath <martin@mvath.de>
 ;; Keywords: macro emulation convenience
 
 ;;; Commentary:

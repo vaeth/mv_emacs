@@ -1,9 +1,9 @@
 ;;; block.el --- Use Block instead of Region in Emacs
-;;  $Revision: 1.3 $
+;;  $Revision: 1.4 $
 
-;; Copyright (C) 1994/2004/2006/2009/2010 by Martin Väth
+;; Copyright (C) 1994/2004/2006/2009/2010/2012 by Martin V\"ath
 
-;; Author:  Martin Väth <martin@mvath.de>
+;; Author:  Martin V\"ath <martin@mvath.de>
 ;; Keywords: block emulation convenience
 
 ;;; Commentary:
@@ -268,7 +268,7 @@ the higher-level function `block-define-command'."
                                            (block-end-char))))
     (if interprogram-cut-function; Not XEmacs
       (funcall interprogram-cut-function
-        (buffer-substring (block-start-char) (block-end-char)) nil))))
+        (buffer-substring (block-start-char) (block-end-char))))))
 
 (defun block-start-new-block (&optional p)
   "Deactivate block and until a new block is defined, let
