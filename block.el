@@ -1,7 +1,7 @@
 ;;; block.el --- Use Block instead of Region in Emacs
-;;  $Revision: 1.4 $
+;;  $Revision: 1.5 $
 
-;; Copyright (C) 1994/2004/2006/2009/2010/2012 by Martin V\"ath
+;; Copyright (C) 1994/2004/2006/2009/2010/2012/2017 by Martin V\"ath
 
 ;; Author:  Martin V\"ath <martin@mvath.de>
 ;; Keywords: block emulation convenience
@@ -1046,6 +1046,8 @@ is run before that."
       ;; XEmacs
       (defun block-mouse-track-cleanup-hook () (block-define-command -1 nil t))
       (add-hook 'mouse-track-cleanup-hook 'block-mouse-track-cleanup-hook))
+    (if (block-functionp 'mouse--drag-set-mark-and-point)
+      (block-get-advising 'mouse--drag-set-mark-and-point))
     (block-get-advising 'insert-register)
     (block-get-advising 'yank)
     (block-get-advising 'yank-pop)
