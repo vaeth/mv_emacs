@@ -1,5 +1,5 @@
 ;;; block.el --- Use Block instead of Region in Emacs
-;;  $Revision: 1.5 $
+;;  $Revision: 1.6 $
 
 ;; Copyright (C) 1994/2004/2006/2009/2010/2012/2017 by Martin V\"ath
 
@@ -38,7 +38,6 @@
 ;; what is currently used. For some simple examples how these functions are
 ;; called, have a look in the definition of the function `block-advise-all'
 ;; at the lines following the text "(run-hooks 'block-advice-hook)".
-
 
 (require 'advice)
 
@@ -317,8 +316,8 @@ it is expected that MODE is an integer/marker which is used as the mark
 to define the region."
   (interactive "P")
   (or p (setq p (point)))
-  (let
-    (tmp (new-data
+  (let (new-data tmp)
+    (setq new-data
       (cond
        ((and (null always) (eq t (block-defined)))
         (list p (if (eq t mode) (block-end-char) (block-start-char))))
@@ -344,7 +343,7 @@ to define the region."
        ((null mode)
         (list (point-min) p))
        (t
-        (list p (point-max))))))
+        (list p (point-max)))))
     (if new-data (apply 'block-create new-data))))
 
 (defun block-redefine-start-command (&optional p always)
@@ -478,8 +477,7 @@ to beginning of current or next line."
     (insert-buffer-substring b s e)
     (block-define-command sp (point) 1)
     (goto-char sp)
-    (save-excursion
-      (set-buffer b)
+    (with-current-buffer b
       (delete-region sm em))
     (set-marker sm nil)
     (set-marker em nil)))
@@ -603,7 +601,7 @@ by `block-advice-code' are ignored unless FORCE is used."
         (if entry
           (if (numberp nostore)
               (cons func newval); return value
-            (setcdr entry newcal)
+            (setcdr entry newval)
             entry); return value
           (unless nostore
             (setq entry (cons func newval))
@@ -1303,7 +1301,6 @@ For most keys the second \"C-\" can be omitted."
   :link '(emacs-commentary-link "block.el")
   :keymap 'block-mode-map
   (block-mode-update))
-
 
 (provide 'block)
 
