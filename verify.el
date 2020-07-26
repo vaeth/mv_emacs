@@ -2,6 +2,7 @@
 ;;  $Revision: 0.2 $
 
 ;; Copyright (C) 1993/2004 by Martin V\"ath
+;; SPDX-License-Identifier: GPL-2.0-only
 
 ;; Author:  Martin V\"ath <martin@mvath.de>
 ;; Keywords: compare verify compare-windows

@@ -2,6 +2,7 @@
 ;;  $Revision: 0.3 $
 
 ;; Copyright (C) 1994/2004 by Martin V\"ath
+;; SPDX-License-Identifier: GPL-2.0-only
 
 ;; Author:  Martin V\"ath <martin@mvath.de>
 ;; Keywords: macro emulation convenience

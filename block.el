@@ -2,6 +2,7 @@
 ;;  $Revision: 1.6 $
 
 ;; Copyright (C) 1994/2004/2006/2009/2010/2012/2017 by Martin V\"ath
+;; SPDX-License-Identifier: GPL-2.0-only
 
 ;; Author:  Martin V\"ath <martin@mvath.de>
 ;; Keywords: block emulation convenience

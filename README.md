@@ -4,6 +4,7 @@ Packages for (X)Emacs: block support, macrorecorder, verify changes
 
 (C) Martin Väth (martin at mvath.de).
 The license of this package is the GNU Public License GPL-2.
+SPDX-License-Identifier: GPL-2.0-only
 
 The packages should run with all non-ancient versions of Emacs or XEmacs.
 
